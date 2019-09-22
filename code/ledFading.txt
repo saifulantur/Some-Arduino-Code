@@ -1,0 +1,23 @@
+int led=11;
+void setup(){
+  Serial.begin(9600);
+  pinMode(led, OUTPUT);
+}
+void loop(){
+  for(int i=1; i<=255; i=i+5)
+  {
+    analogWrite(led, i);
+    Serial.println(i);
+    delay(300);
+  }
+  Serial.println("Brightness is Hign enough");
+  Serial.println("Brightness is going to low");
+  for(int i=255; i>=0; i=i-5)
+  {
+    analogWrite(led, i);
+    Serial.println(i);
+    delay(300);
+  }
+  Serial.println("Brightness is low enough");
+
+}

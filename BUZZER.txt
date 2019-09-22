@@ -1,0 +1,12 @@
+const int buzzer=9;
+void setup()
+{
+pinMode(buzzer, OUTPUT);
+}
+void loop()
+{
+tone(buzzer,20000); // frequency in KHz
+delay(2000);
+noTone(buzzer); //to turn off buzzer
+delay(2000);
+}

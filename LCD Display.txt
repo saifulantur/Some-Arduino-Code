@@ -1,0 +1,9 @@
+#include<LiquidCrystal.h>
+LiquidCrystal lcd(12,11,5,4,3,2);//12-RS,11-En,5,4,3,2-Display
+void setup() {
+lcd.begin(16,2);//16-no. of col. , 2-no. of row
+lcd.print('HELLO');
+}
+void loop() {
+lcd.setCursor(0,1);// 0-col, 1-row
+}
